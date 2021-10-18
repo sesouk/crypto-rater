@@ -28,7 +28,7 @@ contract CryptoRater {
 
   function plus(string memory _message) public {
     require(
-      lastRateAt[msg.sender] + 15 minutes < block.timestamp,
+      lastRateAt[msg.sender] + 10 minutes < block.timestamp,
       "Wait 15 min"
     );
 
@@ -77,7 +77,7 @@ contract CryptoRater {
 
     seed = randomNum;
 
-    if (randomNum < 50) {
+    if (randomNum < 10) {
       console.log("%s won!", msg.sender);
 
     uint256 prizeAmount = 0.0001 ether;
