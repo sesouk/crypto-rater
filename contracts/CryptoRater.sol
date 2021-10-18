@@ -44,7 +44,7 @@ contract CryptoRater {
 
     seed = randomNum;
 
-    if (randomNum < 50) {
+    if (randomNum < 10) {
       console.log("%s won!", msg.sender);
 
     uint256 prizeAmount = 0.0001 ether;
