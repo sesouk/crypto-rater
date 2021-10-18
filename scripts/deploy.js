@@ -6,7 +6,9 @@ const main = async () => {
   console.log("Gama-chan balance: ", accountBalance.toString());
 
   const Token = await hre.ethers.getContractFactory("CryptoRater")
-  const portal = await Token.deploy()
+  const portal = await Token.deploy({
+    value: hre.ethers.utils.parseEther("0.001")
+  })
   await portal.deployed()
 
   console.log("CryptoRater address: ", portal.address);
